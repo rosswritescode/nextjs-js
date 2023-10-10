@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    fetch("./api/hello")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +20,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="/sub">NSubroute!</a>
         </h1>
 
         <p className={styles.description}>
