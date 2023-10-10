@@ -24,6 +24,9 @@ export default function Home() {
           Welcome to <Link href="/sub">NSubroute!</Link>
         </h1>
 
+        
+			  <Link href="/.auth/login/aad">Login</Link>
+
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
